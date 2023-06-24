@@ -29,9 +29,9 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/timesheet', function () {
-    return Inertia::render('Timesheet');
-})->middleware(['auth', 'verified'])->name('timesheet');
+Route::get('/timesheets', function () {
+    return Inertia::render('Timesheets');
+})->middleware(['auth', 'verified'])->name('timesheets');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
